@@ -12,6 +12,7 @@
     "apps/*"
   ],
   "scripts": {
+    "heroku-postbuild": "bash bin/setup-bun.sh && bun install",
     "prepare": "husky",
     "pre-commit": "bun format-and-lint && bun lint-repo && turbo check-broken-links",
     "format-and-lint": "biome check .",
@@ -38,7 +39,6 @@
     "turbo": "2.3.4",
     "typescript": "5.7.3"
   },
-  "packageManager": "bun@1.1.42",
   "engines": {
     "node": "^22"
   },
